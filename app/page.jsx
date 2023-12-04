@@ -1,5 +1,6 @@
 import Hero from "@/components/hero";
 import NavBar from "@/components/navbar";
+import Pricing from "@/components/pricing";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <NavBar />
       <main>
         <Hero />
+        <Pricing />
       </main>
     </div>
   );

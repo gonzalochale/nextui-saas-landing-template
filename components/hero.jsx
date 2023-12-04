@@ -48,17 +48,21 @@ export default function Hero() {
               variant="dot"
               color="default"
             >
-              La inteligencia artificial llegó al TecNM
+              La inteligencia artificial llegó a tu carrera
             </Chip>
-            <h1 className="text-4xl font-extrabold mx-auto md:text-5xl">
-              Con AiTec podrás tomar decisiones
+            <h1 className="text-4xl font-extrabold mx-auto md:text-5xl bg-gradient-to-b from-foreground to-foreground/70 text-transparent bg-clip-text">
+              Con{" "}
+              <span className="bg-gradient-to-b from-foreground to-primary text-transparent bg-clip-text">
+                AiTec
+              </span>{" "}
+              podrás tomar decisiones universitarias
             </h1>
-            <p className="max-w-2xl mx-auto">
+            <p className="max-w-2xl mx-auto text-foreground/80">
               de una manera más rápida y sencilla mediante inteligencia
               artificial.
             </p>
             <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
-              <motion.div whileHover={{ scale: 1.1 }}>
+              <motion.div whileHover={{ scale: 1.05 }}>
                 <Button as={Link} color="primary" href="#" variant="solid">
                   Comenzar Ahora
                 </Button>
