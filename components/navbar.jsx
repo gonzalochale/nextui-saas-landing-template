@@ -15,32 +15,32 @@ export default function NavBar() {
   const menuItems = ["Inicio", "precios"];
 
   return (
-    <Navbar isBlurred="false" isBordered maxWidth="lg">
+    <Navbar isBlurred="false" maxWidth="xl">
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle />
       </NavbarContent>
 
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
-          <span className="font-bold text-inherit">AiTec</span>
+          <span className="font-bold text-inherit text-lg">AiTec</span>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-5" justify="center">
         <NavbarBrand>
-          <span className="font-bold text-xl flex gap-3 justify-center items-center">
+          <span className="font-bold text-2xl flex gap-3 justify-center items-center">
             AiTec
           </span>
         </NavbarBrand>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Button as={Link} variant="light">
             Inicio
-          </Link>
+          </Button>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Button as={Link} variant="light">
             Precios
-          </Link>
+          </Button>
         </NavbarItem>
       </NavbarContent>
 

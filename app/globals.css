@@ -4,17 +4,17 @@
 
 :root {
   --foreground: #000;
-  --background: #fff
+  --background: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground: #fff;
-    --background: #000
+    --background: #000;
   }
 }
 
 body {
   color: rgb(var(--foreground));
-  background: rgb(var(--background));
+  background-color: rgb(var(--background));
 }
