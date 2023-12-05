@@ -3,6 +3,7 @@ import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { Button } from "@nextui-org/button";
 import { Divider } from "@nextui-org/divider";
 import { motion } from "framer-motion";
+import { Check } from "lucide-react";
 
 export default function Pricing() {
   const plans = [
@@ -11,12 +12,7 @@ export default function Pricing() {
       desc: "Enjoy limited access to all our features",
       price: 0,
       isMostPop: false,
-      features: [
-        "Make the best schedule",
-        "Make the best schedule",
-        "Make the best schedule",
-        "Make the best schedule",
-      ],
+      features: ["Make the best schedule", "Make the best schedule"],
     },
     {
       name: "Plan Basic",
@@ -24,7 +20,6 @@ export default function Pricing() {
       price: 10,
       isMostPop: true,
       features: [
-        "Make the best schedule",
         "Make the best schedule",
         "Make the best schedule",
         "Make the best schedule",
@@ -63,12 +58,13 @@ export default function Pricing() {
             <p>Select the plan that best suits your needs.</p>
           </div>
         </div>
-        <div className="mt-16 gap-6 grid sm:grid-cols-2 lg:grid-cols-3 place-content-center">
+        <div className="mt-16 gap-10 grid lg:grid-cols-3 place-content-center">
           {plans.map((item, idx) => (
             <Card
               key={idx}
-              isFooterBlurred
-              className={item.isMostPop ? "border-2 border-primary" : ""}
+              className={
+                item.isMostPop ? "border-2 border-primary sm:scale-110" : ""
+              }
             >
               <CardHeader>
                 <span className="font-medium">{item.name}</span>
@@ -85,17 +81,7 @@ export default function Pricing() {
                   </li>
                   {item.features.map((featureItem, idx) => (
                     <li key={idx} className="flex items-center gap-5">
-                      <svg
-                        className="h-5 w-5"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clip-rule="evenodd"
-                        ></path>
-                      </svg>
+                      <Check size={20} />
                       {featureItem}
                     </li>
                   ))}
@@ -103,7 +89,9 @@ export default function Pricing() {
               </CardBody>
               <CardFooter>
                 <Button
-                  className={item.isMostPop ? "w-full bg-primary" : "w-full"}
+                  className="w-full"
+                  variant="solid"
+                  color={item.isMostPop ? "primary" : "default"}
                 >
                   Get Started
                 </Button>

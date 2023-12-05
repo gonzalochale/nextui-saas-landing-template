@@ -53,13 +53,7 @@ export default function NavBar() {
         <NavbarItem>
           <Dropdown>
             <DropdownTrigger>
-              <Button
-                disableRipple
-                className="p-0 bg-transparent data-[hover=true]:bg-transparent"
-                endContent={<ChevronDown size={24} />}
-                radius="sm"
-                variant="light"
-              >
+              <Button endContent={<ChevronDown size={16} />} variant="light">
                 Features
               </Button>
             </DropdownTrigger>
