@@ -1,61 +1,87 @@
+"use client";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { Button } from "@nextui-org/button";
-import { Image } from "@nextui-org/image";
-import { Link } from "@nextui-org/link";
 import { Divider } from "@nextui-org/divider";
+import { motion } from "framer-motion";
 
 export default function Pricing() {
   const plans = [
     {
-      name: "Plan Gratuito",
-      desc: "Disfruta de 5 creditos gratis para probar nuestro servicio.",
+      name: "Free Plan",
+      desc: "Enjoy limited access to all our features",
       price: 0,
       isMostPop: false,
-      features: ["Genera el mejor horario"],
+      features: [
+        "Make the best schedule",
+        "Make the best schedule",
+        "Make the best schedule",
+        "Make the best schedule",
+      ],
     },
     {
-      name: "Plan Basico",
-      desc: "25 Creditos mensuales para que puedas probar nuestro servicio.",
-      price: 99,
+      name: "Plan Basic",
+      desc: "Make the best schedule for your team",
+      price: 10,
       isMostPop: true,
-      features: ["Genera el mejor horario"],
+      features: [
+        "Make the best schedule",
+        "Make the best schedule",
+        "Make the best schedule",
+        "Make the best schedule",
+      ],
     },
     {
       name: "Plan Premium",
-      desc: "100 Creditos mensuales para que puedas probar nuestro servicio.",
-      price: 200,
+      desc: "Make the best schedule for your team and more",
+      price: 20,
       isMostPop: false,
-      features: ["Genera el mejor horario"],
+      features: [
+        "Make the best schedule",
+        "Make the best schedule",
+        "Make the best schedule",
+        "Make the best schedule",
+      ],
     },
   ];
 
   return (
-    <section className="max-w-screen-xl mx-auto px-4 py-28 gap-12 md:px-8 flex flex-col justify-center items-center">
+    <motion.section
+      initial={{ scale: 1.1, opacity: 0 }}
+      animate={{
+        scale: 1,
+        opacity: 1,
+      }}
+      transition={{ duration: 0.5 }}
+      className="max-w-screen-xl mx-auto px-4 py-24 gap-12 md:px-8 flex flex-col justify-center items-center"
+    >
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="relative max-w-xl mx-auto sm:text-center">
-          <h3 className="text-3xl font-semibold sm:text-4xl">
-            Planes y precios para todos
+          <h3 className="text-3xl font-bold sm:text-4xl bg-gradient-to-b from-foreground to-foreground/70 text-transparent bg-clip-text">
+            Pricing Plans for your business
           </h3>
-          <div className="mt-3 max-w-xl">
-            <p>selecciona el plan que mas se adapte a tus necesidades.</p>
+          <div className="mt-3 max-w-xl text-foreground/80">
+            <p>Select the plan that best suits your needs.</p>
           </div>
         </div>
         <div className="mt-16 gap-6 grid sm:grid-cols-2 lg:grid-cols-3 place-content-center">
           {plans.map((item, idx) => (
-            <Card key={idx} isFooterBlurred>
+            <Card
+              key={idx}
+              isFooterBlurred
+              className={item.isMostPop ? "border-2 border-primary" : ""}
+            >
               <CardHeader>
                 <span className="font-medium">{item.name}</span>
               </CardHeader>
               <Divider />
               <CardBody className="gap-3">
                 <div className="text-3xl font-semibold">
-                  ${item.price}{" "}
-                  <span className="text-xl font-normal">/mes</span>
+                  ${item.price} <span className="text-xl font-normal">/mo</span>
                 </div>
                 <p>{item.desc}</p>
                 <ul className="p-8 space-y-3">
                   <li className="font-medium">
-                    <p>Qué incluye</p>
+                    <p>Features</p>
                   </li>
                   {item.features.map((featureItem, idx) => (
                     <li key={idx} className="flex items-center gap-5">
@@ -76,12 +102,16 @@ export default function Pricing() {
                 </ul>
               </CardBody>
               <CardFooter>
-                <Button className="w-full">Comenzar Ahora</Button>
+                <Button
+                  className={item.isMostPop ? "w-full bg-primary" : "w-full"}
+                >
+                  Get Started
+                </Button>
               </CardFooter>
             </Card>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

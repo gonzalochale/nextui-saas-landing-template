@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <div className="relative justify-center items-center">
       <section>
-        <div className="max-w-screen-xl mx-auto px-4 py-28 gap-12 md:px-8 flex flex-col justify-center items-center">
+        <div className="max-w-screen-xl mx-auto px-4 py-24 gap-12 md:px-8 flex flex-col justify-center items-center">
           <motion.div
             initial={{ y: 5, opacity: 0 }}
             animate={{
@@ -48,37 +48,38 @@ export default function Hero() {
               variant="dot"
               color="default"
             >
-              La inteligencia artificial llegó a tu carrera
+              NextUI template its here!
             </Chip>
             <h1 className="text-4xl font-extrabold mx-auto md:text-5xl bg-gradient-to-b from-foreground to-foreground/70 text-transparent bg-clip-text">
-              Con{" "}
+              Use Nextjs and{" "}
               <span className="bg-gradient-to-b from-foreground to-primary text-transparent bg-clip-text">
-                AiTec
+                NextUI
               </span>{" "}
-              podrás tomar decisiones universitarias
+              to build your website
             </h1>
             <p className="max-w-2xl mx-auto text-foreground/80">
-              de una manera más rápida y sencilla mediante inteligencia
-              artificial.
+              Create your website with NextUI and Nextjs, the best UI Framework.
             </p>
             <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
               <motion.div whileHover={{ scale: 1.05 }}>
                 <Button as={Link} color="primary" href="#" variant="solid">
-                  Comenzar Ahora
+                  Get Started
                 </Button>
               </motion.div>
             </div>
           </motion.div>
         </div>
       </section>
-      <div className="w-full h-full absolute -top-20 flex justify-center -z-10">
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.5 }}
-          className="w-96 h-52 bg-primary blur-[300px] rounded-full"
-        ></motion.div>
-      </div>
+      <motion.div
+        initial={{ y: 5, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.7, delay: 0.5 }}
+        className="w-full h-full absolute -top-32 flex justify-end items-center -z-10"
+      >
+        <div className="w-3/4 flex justify-center items-center">
+          <div className="w-12 h-[600px] bg-primary blur-[100px] rounded-3xl max-sm:rotate-[15deg] sm:rotate-[30deg]"></div>
+        </div>
+      </motion.div>
     </div>
   );
 }
