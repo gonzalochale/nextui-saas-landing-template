@@ -2,7 +2,7 @@
 
 A Next.js 14 landing page template for SaaS applications with NextUI and Tailwind CSS.
 
-![Preview](/preview.png)
+![Preview](/public/preview.png)
 
 ## Table of Contents
 
