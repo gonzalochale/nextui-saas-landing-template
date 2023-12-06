@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Faq() {
   const defaultContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+    "Here is the content of the accordion. You can put any elements here.";
   return (
     <section className="relative max-w-screen-xl mx-auto px-4 py-28 gap-12 md:px-8 flex flex-col justify-center items-center">
       <motion.div
@@ -73,19 +73,18 @@ export default function Faq() {
             },
           }}
         >
-          <AccordionItem key="1" aria-label="Accordion 1" title="Accordion 1">
+          <AccordionItem key="1" aria-label="¿Why NextUI?" title="¿Why NextUI">
             {defaultContent}
           </AccordionItem>
-          <AccordionItem key="2" aria-label="Accordion 2" title="Accordion 2">
+          <AccordionItem key="2" aria-label="¿Why NextUI?" title="¿Why NextUI?">
             {defaultContent}
           </AccordionItem>
-          <AccordionItem key="3" aria-label="Accordion 3" title="Accordion 3">
+          <AccordionItem key="3" aria-label="¿Why NextUI?" title="¿Why NextUI?">
             {defaultContent}
           </AccordionItem>
         </Accordion>
       </motion.div>
-      <div className="absolute w-40 h-40 border bg-primary -left-28 top-0 blur-[200px]"></div>
-      <div className="absolute w-40 h-40 border bg-primary -right-28 bottom-0 blur-[150px]"></div>
+      <div className="absolute w-40 h-40 border bg-light -left-28 top-0 blur-[200px]"></div>
     </section>
   );
 }
