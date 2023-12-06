@@ -8,14 +8,14 @@ import { Check } from "lucide-react";
 export default function Pricing() {
   const plans = [
     {
-      name: "Free Plan",
+      name: "Hobby Plan",
       desc: "Enjoy limited access to all our features",
       price: 0,
       isMostPop: false,
       features: ["Make the best schedule", "Make the best schedule"],
     },
     {
-      name: "Plan Basic",
+      name: "Basic Plan",
       desc: "Make the best schedule for your team",
       price: 10,
       isMostPop: true,
@@ -26,7 +26,7 @@ export default function Pricing() {
       ],
     },
     {
-      name: "Plan Premium",
+      name: "Enterprise Plan",
       desc: "Make the best schedule for your team and more",
       price: 20,
       isMostPop: false,
