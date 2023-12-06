@@ -40,18 +40,19 @@ export default function Pricing() {
   ];
 
   return (
-    <motion.section
-      initial={{ scale: 1.1, opacity: 0 }}
-      animate={{
-        scale: 1,
-        opacity: 1,
-      }}
-      transition={{ duration: 0.5 }}
-      className="max-w-screen-xl mx-auto px-4 py-24 gap-12 md:px-8 flex flex-col justify-center items-center"
-    >
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+    <section className="max-w-screen-xl mx-auto px-4 py-28 gap-12 md:px-8 flex flex-col justify-center items-center">
+      <motion.div
+        initial={{ y: 5, opacity: 0 }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, delay: 0.5 }}
+        className="max-w-screen-xl mx-auto px-4 md:px-8"
+      >
         <div className="relative max-w-xl mx-auto sm:text-center">
-          <h3 className="text-3xl font-bold sm:text-4xl bg-gradient-to-b from-foreground to-foreground/70 text-transparent bg-clip-text">
+          <h3 className="text-2xl font-bold sm:text-3xl bg-gradient-to-b from-foreground to-foreground/70 text-transparent bg-clip-text">
             Pricing Plans for your business
           </h3>
           <div className="mt-3 max-w-xl text-foreground/80">
@@ -99,7 +100,7 @@ export default function Pricing() {
             </Card>
           ))}
         </div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 }
