@@ -27,7 +27,7 @@ This project is a starter template for SaaS applications landing page using Next
 
 To get started with this template, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/gonzalochale/nextjs-nextui-saas-template.git`
+1. Clone the repository: `git clone https://github.com/gonzalochale/nextui-saas-template.git`
 2. Install the dependencies: `npm install`
 3. Start the development server: `npm run dev`
 
