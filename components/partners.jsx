@@ -4,7 +4,7 @@ import { Tooltip } from "@nextui-org/tooltip";
 
 export default function Partners() {
   return (
-    <section className="max-w-screen-md mx-auto px-4 py-24 gap-12 md:px-8 flex flex-col justify-center items-center">
+    <section className="max-w-screen-md w-full mx-auto px-4 py-24 gap-12 md:px-8 flex flex-col justify-center items-center">
       <motion.h2
         initial={{ y: 5, opacity: 0 }}
         whileInView={{
@@ -13,7 +13,7 @@ export default function Partners() {
         }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-2xl font-bold sm:text-3xl bg-gradient-to-b from-foreground to-foreground/70 text-transparent bg-clip-text"
+        className="text-2xl font-light tracking-tighter sm:text-3xl bg-gradient-to-b from-foreground to-foreground/70 text-transparent bg-clip-text text-pretty"
       >
         Our Partners
       </motion.h2>

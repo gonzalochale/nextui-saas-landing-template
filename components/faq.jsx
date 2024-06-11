@@ -84,7 +84,6 @@ export default function Faq() {
           </AccordionItem>
         </Accordion>
       </motion.div>
-      <div className="absolute w-40 h-40 border bg-light -left-28 top-0 blur-[200px]"></div>
     </section>
   );
 }

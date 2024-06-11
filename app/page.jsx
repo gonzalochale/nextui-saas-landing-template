@@ -7,15 +7,13 @@ import Faq from "@/components/faq";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <main className="flex flex-col min-h-dvh">
       <NavBar />
-      <main>
-        <Hero />
-        <Partners />
-        <Pricing />
-        <Faq />
-      </main>
+      <Hero />
+      <Partners />
+      <Pricing />
+      <Faq />
       <Footer />
-    </div>
+    </main>
   );
 }

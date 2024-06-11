@@ -40,7 +40,7 @@ export default function Pricing() {
   ];
 
   return (
-    <section className="max-w-screen-xl mx-auto px-4 py-28 gap-12 md:px-8 flex flex-col justify-center items-center">
+    <section className="max-w-screen-xl w-full mx-auto px-4 py-28 gap-12 md:px-8 flex flex-col justify-center items-center">
       <motion.div
         initial={{ y: 5, opacity: 0 }}
         whileInView={{
@@ -52,10 +52,10 @@ export default function Pricing() {
         className="max-w-screen-xl mx-auto px-4 md:px-8"
       >
         <div className="relative max-w-xl mx-auto sm:text-center">
-          <h3 className="text-2xl font-bold sm:text-3xl bg-gradient-to-b from-foreground to-foreground/70 text-transparent bg-clip-text">
+          <h3 className="text-2xl font-light tracking-tighter sm:text-3xl bg-gradient-to-b from-foreground to-foreground/70 text-transparent bg-clip-text text-pretty">
             Pricing Plans for your business
           </h3>
-          <div className="mt-3 max-w-xl text-foreground/80">
+          <div className="mt-3 max-w-xl text-foreground/80 text-balance">
             <p>Select the plan that best suits your needs.</p>
           </div>
         </div>
